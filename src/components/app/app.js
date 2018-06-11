@@ -14,6 +14,8 @@ class App extends Component {
 		this.intervalID = null;
 		this.slideLeft = this.slideLeft.bind(this);
 		this.slideRight = this.slideRight.bind(this);
+		this.autoRotate = this.autoRotate.bind(this);
+		this.handleHover = this.handleHover.bind(this);
 		this.autoRotate();
 	}
 
@@ -41,12 +43,18 @@ class App extends Component {
 		this.intervalID = setInterval(this.slideRight, 2000);
 	}
 
+	handleHover(){
+		clearInterval(this.intervalID);
+		console.log('hovered');
+	}
 
 	render() {
 		return (
 			<div className='container'>
 				<div className="headerTitle">Carousel</div>
-				<Carousel slides={Slides} {...this.state} />
+				<Carousel slides={Slides} {...this.state} 
+				handleHover={this.handleHover}
+				handleMouseOut={this.autoRotate} />
 				<Arrow direction='left' handleClick={this.slideLeft} icon='<' />
 				<Arrow direction='right' handleClick={this.slideRight} icon='>' />
 			</div>

@@ -16,7 +16,10 @@ class Carousel extends Component {
 				<div className="slideContainer" key={index} style={slideContainerStyles}>
 					<div className="slideTitle">{topic}</div>
 					<div className="slideMessage">{message}</div>
-					<div className="slide" style={slideStyles}></div>
+					<div className="slide" style={slideStyles}
+					onMouseLeave={this.props.handleMouseOut}
+					onMouseEnter={this.props.handleHover}>
+					</div>
 				</div>
 			);
 		});
