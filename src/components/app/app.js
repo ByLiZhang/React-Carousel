@@ -20,7 +20,6 @@ class App extends Component {
 	}
 
 	slideLeft(){
-		console.log('left clicked');
 		let maxIndex = Slides.length-1;
 		const {currentIndex} = this.state;
 		const nextIndex = (currentIndex===0) ? maxIndex : currentIndex-1;
@@ -30,7 +29,6 @@ class App extends Component {
 	}
 
 	slideRight(){
-		console.log('right clicked');
 		let maxIndex = Slides.length-1;
 		const {currentIndex} = this.state;
 		const nextIndex = (currentIndex===maxIndex) ? 0 : currentIndex+1;
@@ -45,7 +43,6 @@ class App extends Component {
 
 	handleHover(){
 		clearInterval(this.intervalID);
-		console.log('hovered');
 	}
 
 	render() {
