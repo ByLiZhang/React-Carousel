@@ -21,11 +21,14 @@ html * {
 	width: 100%;
 	height: 70%;
 	border: 1px solid green;
+	display: flex;
+	overflow: hidden;
 }
 
 .slideContainer {
 	height: 100%;
 	width: 100%;
+	flex: 1 0 100%;
 }
 
 .slide {
@@ -34,4 +37,9 @@ html * {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.slideTitle, .slideMessage {
+	text-align: center;
+	font-size: 2rem;
 }
