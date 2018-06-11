@@ -8,8 +8,12 @@ class Carousel extends Component {
 			const slideStyles = {
 				backgroundImage: `url(${src})`
 			};
+			const slideContainerStyles = {
+				transform: `translateX(${this.props.currentIndex * -100}%)`,
+				transition: '0.5s'
+			}
 			return (
-				<div className="slideContainer" key={index}>
+				<div className="slideContainer" key={index} style={slideContainerStyles}>
 					<div className="slideTitle">{topic}</div>
 					<div className="slideMessage">{message}</div>
 					<div className="slide" style={slideStyles}></div>
