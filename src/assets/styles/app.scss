@@ -43,3 +43,28 @@ html * {
 	text-align: center;
 	font-size: 2rem;
 }
+
+.filmStrip {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.thumbnail {
+	height: 40px;
+	width: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.thumbnail:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.active {
+	opacity: 1;
+}
