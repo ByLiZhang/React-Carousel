@@ -61,8 +61,8 @@ class App extends Component {
 				handleHover={this.handleHover}
 				handleMouseOut={this.autoRotate} />
 
-				<Arrow direction='left' handleClick={this.slideLeft} icon='fas fa-angle-left' />
-				<Arrow direction='right' handleClick={this.slideRight} icon='fas fa-angle-right' />
+				<Arrow title='Previous' direction='left' handleClick={this.slideLeft} icon='fas fa-angle-left' />
+				<Arrow title='Next' direction='right' handleClick={this.slideRight} icon='fas fa-angle-right' />
 
 				<FilmStrip slides={Slides} {...this.state}
 				handleThumbnailClick={this.handleThumbnailClick}
