@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Slides from './slides';
+import Slides from './slidesInfo';
 import Carousel from './carousel';
+import FilmStrip from './filmstrip';
 import Arrow from './arrow';
 import '../../assets/styles/app.scss';
 
@@ -52,8 +53,11 @@ class App extends Component {
 				<Carousel slides={Slides} {...this.state} 
 				handleHover={this.handleHover}
 				handleMouseOut={this.autoRotate} />
+
 				<Arrow direction='left' handleClick={this.slideLeft} icon='<' />
 				<Arrow direction='right' handleClick={this.slideRight} icon='>' />
+
+				<FilmStrip slides={Slides} {...this.state}/>
 			</div>
 		);
 	}
