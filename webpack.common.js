@@ -67,7 +67,14 @@ module.exports = {
                 //     content: ''
                 // }
             ],
-            links: [],
+            links: [
+                {
+                    href: "https://use.fontawesome.com/releases/v5.0.13/css/all.css",
+                    rel: "stylesheet", 
+                    integrity: "sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp",
+                    crossorigin: "anonymous"
+                }
+            ],
             mobile: true,
             lang: 'en-us',
             title: 'Carousel Demo'
