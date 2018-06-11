@@ -11,10 +11,10 @@ class App extends Component {
 		this.state = {
 			currentIndex: 0
 		};
-
-		this.slideLeft=this.slideLeft.bind(this);
-		this.slideRight=this.slideRight.bind(this);
-
+		this.intervalID = null;
+		this.slideLeft = this.slideLeft.bind(this);
+		this.slideRight = this.slideRight.bind(this);
+		this.autoRotate();
 	}
 
 	slideLeft(){
@@ -35,7 +35,12 @@ class App extends Component {
 		this.setState({
 			currentIndex: nextIndex
 		});
-	}	
+	}
+
+	autoRotate(){
+		this.intervalID = setInterval(this.slideRight, 2000);
+	}
+
 
 	render() {
 		return (
