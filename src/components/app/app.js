@@ -17,6 +17,7 @@ class App extends Component {
 		this.slideRight = this.slideRight.bind(this);
 		this.autoRotate = this.autoRotate.bind(this);
 		this.handleHover = this.handleHover.bind(this);
+		this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
 		this.autoRotate();
 	}
 
@@ -46,6 +47,12 @@ class App extends Component {
 		clearInterval(this.intervalID);
 	}
 
+	handleThumbnailClick(index){
+		this.setState({
+			currentIndex: index
+		});
+	}
+
 	render() {
 		return (
 			<div className='container'>
@@ -57,7 +64,9 @@ class App extends Component {
 				<Arrow direction='left' handleClick={this.slideLeft} icon='<' />
 				<Arrow direction='right' handleClick={this.slideRight} icon='>' />
 
-				<FilmStrip slides={Slides} {...this.state}/>
+				<FilmStrip slides={Slides} {...this.state}
+				handleThumbnailClick={this.handleThumbnailClick}
+				/>
 			</div>
 		);
 	}
