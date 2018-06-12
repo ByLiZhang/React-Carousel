@@ -18,7 +18,7 @@ html * {
 .headerTitle {
 	font-size: 2.5rem;
 	text-align: center;
-	color: darksalmon;
+	color: salmon;
 	margin-bottom: 5px;
 }
 
@@ -95,6 +95,11 @@ html * {
 	position: absolute;
 	top: 39%;
 	background-color: rgba(255,255,255,0.85);
+	color: #aeaeae;
+}
+
+.left:hover, .right:hover {
+	color: black;
 }
 
 .left {
@@ -107,7 +112,6 @@ html * {
 
 .left i, .right i {
 	font-size: 3rem;
-	color: #aeaeae;
 }
 
 .left i {
@@ -118,15 +122,11 @@ html * {
 	transform: translateX(3px);
 }
 
-.left i:hover, .right i:hover {
-	color: black;
-}
-
 .timeIndicator {
 	width: 5%;
 }
 
-.timeIndicator.active {
+.timeIndicator.current {
 	width: 100%;
 	transition: width 5.5s;
 }

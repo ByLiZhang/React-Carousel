@@ -6,7 +6,6 @@ const Arrow = (props) => (
 	onClick={props.handleClick}> 
 		<i className={props.icon}></i>
 	</div>
-
 );
 
 export default Arrow;

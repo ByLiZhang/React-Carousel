@@ -12,7 +12,7 @@ class Carousel extends Component {
 				transform: `translateX(${this.props.currentIndex * -100}%)`,
 				transition: '0.5s'
 			}
-			const hrName = (index===this.props.currentIndex) ? 'timeIndicator active' : 'timeIndicator';
+			const hrName = (index===this.props.currentIndex) ? 'timeIndicator current' : 'timeIndicator';
 			return (
 				<div className="slideContainer" key={index} style={slideContainerStyles}>
 					<div className="slideTitle">{topic}</div>

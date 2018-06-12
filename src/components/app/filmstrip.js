@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class FilmStrip extends Component {
+	
 	render() {
 		const {currentIndex} = this.props;
 		const thumbnails = this.props.slides.map((item, index)=>{
