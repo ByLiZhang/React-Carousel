@@ -122,6 +122,15 @@ html * {
 	color: black;
 }
 
+.timeIndicator {
+	width: 5%;
+}
+
+.timeIndicator.active {
+	width: 100%;
+	transition: 2.5s;
+}
+
 @media only screen and (max-width: 768px) {
 	html {
 		font-size: 12px;
