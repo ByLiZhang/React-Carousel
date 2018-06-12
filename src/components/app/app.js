@@ -40,7 +40,7 @@ class App extends Component {
 	}
 
 	autoRotate(){
-		this.intervalID = setInterval(this.slideRight, 2000);
+		// this.intervalID = setInterval(this.slideRight, 2000);
 	}
 
 	handleHover(){
@@ -56,17 +56,14 @@ class App extends Component {
 	render() {
 		return (
 			<div className='container'>
-				<div className="headerTitle">Carousel</div>
+				<div className="headerTitle">GoT Sigils</div>
 				<Carousel slides={Slides} {...this.state} 
 				handleHover={this.handleHover}
 				handleMouseOut={this.autoRotate} />
-
-				<Arrow direction='left' handleClick={this.slideLeft} icon='<' />
-				<Arrow direction='right' handleClick={this.slideRight} icon='>' />
-
 				<FilmStrip slides={Slides} {...this.state}
-				handleThumbnailClick={this.handleThumbnailClick}
-				/>
+				handleThumbnailClick={this.handleThumbnailClick}/>
+				<Arrow title='Previous' direction='left' handleClick={this.slideLeft} icon='fas fa-angle-left' />
+				<Arrow title='Next' direction='right' handleClick={this.slideRight} icon='fas fa-angle-right' />
 			</div>
 		);
 	}
