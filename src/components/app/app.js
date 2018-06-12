@@ -40,7 +40,7 @@ class App extends Component {
 	}
 
 	autoRotate(){
-		// this.intervalID = setInterval(this.slideRight, 2000);
+		this.intervalID = setInterval(this.slideRight, 5000);
 	}
 
 	handleHover(){
