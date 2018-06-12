@@ -1,15 +1,17 @@
+html {
+	font-size: 16px;
+}
+
 html * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-size: 16px;
 }
 
 .container {
 	width: 100vw;
 	height: 80vh;
 	margin: 10vh 0;
-	border: 1px solid blue;
 	position: relative;
 }
 
@@ -23,7 +25,6 @@ html * {
 .carousel {
 	width: 100%;
 	height: 70%;
-	/*border: 1px solid green;*/
 	display: flex;
 	overflow: hidden;
 	background-color: black;
@@ -45,7 +46,15 @@ html * {
 
 .slideTitle, .slideMessage {
 	text-align: center;
+	color: darkgrey;
+}
+
+.slideTitle {
 	font-size: 2rem;
+	font-style: italic;
+}
+.slideMessage {
+	font-size: 1.2rem;
 }
 
 .filmStrip {
@@ -80,7 +89,6 @@ html * {
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
-	/*border: 1px solid blue;*/
 }
 
 .left, .right {
