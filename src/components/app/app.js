@@ -56,7 +56,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className='container'>
-				<div className="headerTitle">Carousel</div>
+				<div className="headerTitle">GoT Sigils</div>
 				<Carousel slides={Slides} {...this.state} 
 				handleHover={this.handleHover}
 				handleMouseOut={this.autoRotate} />
